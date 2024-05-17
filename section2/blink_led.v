@@ -2,12 +2,12 @@ module blink_led (
     input wire clk,
     input wire reset,
     output reg led 
-):
+);
   
     reg [31:0] counter; // Counter to create delay 
 
     // Paramater to set frequency
-    paramater DIVISOR = 25000000;
+    parameter DIVISOR = 25000000;
 
     always @(posedge clk or posedge reset) begin 
         if (reset) begin 
